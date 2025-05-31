@@ -1,0 +1,76 @@
+/* ===== SECCIÓN NOSOTROS ===== */
+.nosotros-seccion {
+    padding: 80px 20px;
+    background-color: transparent;
+    /* fondo ya lo da el body */
+    display: flex;
+    justify-content: center;
+}
+
+
+.nosotros-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.nosotros-contenido {
+    flex: 1 1 550px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.nosotros-contenido h1 {
+    font-size: 32px;
+    color: #2f4f4f;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.nosotros-contenido p {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.nosotros-imagen {
+    height: 100%;
+    max-height: 400px;
+    flex: 1 1 350px;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+.nosotros-imagen .carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nosotros-imagen .carousel-inner {
+    flex: 1;
+    height: 100%;
+}
+
+.nosotros-imagen .carousel-item {
+    height: 100%;
+}
+
+.nosotros-imagen .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

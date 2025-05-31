@@ -1,0 +1,15 @@
+/* ===== MAIN ===== */
+main.hero-split {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    min-height: 60vh;
+}
+
+main::selection {
+    background-color: #1d843c;
+    color: #fff;
+}

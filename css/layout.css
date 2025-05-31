@@ -1,0 +1,23 @@
+/* === LAYOUT GENERAL CON CSS GRID === */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Posicionamiento del header en el grid principal */
+.header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
