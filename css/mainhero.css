@@ -1,4 +1,18 @@
-/* ===== SECCIÓN HERO ===== */
+/* ===== MAIN ===== */
+main.hero-split {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding-top: 1px;
+}
+
+main::selection {
+    background-color: #1d843c;
+    color: #fff;
+}
+
 .hero-texto {
     flex: 1 1 500px;
     padding: 60px;
@@ -12,7 +26,7 @@
 }
 
 .hero-texto img.logo-hero {
-    max-width: 180px;
+    max-width: 240px;
     margin-bottom: 20px;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
@@ -35,11 +49,11 @@
 .boton-hero {
     background-color: #1d843c;
     color: #fff;
-    padding: 14px 30px;
     border: none;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 1rem;
+    padding: 18px 40px;
+    font-size: 1.2rem;
     font-weight: 600;
     width: fit-content;
     transition: background-color 0.3s ease;

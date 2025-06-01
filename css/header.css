@@ -1,16 +1,12 @@
 /* ===== HEADER  ===== */
 /* Estilo visual general para cualquier <header> */
-header {
+.header-old {
     width: 100%;
-    padding: 20px 40px;
-    background-color: rgba(255, 255, 255, 0.85);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0;
+    background-color: transparent;
     position: sticky;
     top: 0;
     z-index: 999;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 header::selection {
@@ -27,43 +23,62 @@ header::selection {
     color: #1e1e1e;
 }
 
-.header-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.header-menu a {
-    color: #1e1e1e;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.95em;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.header-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: -4px;
-    background-color: #1d843c;
-    transition: width 0.3s ease;
-}
-
-.header-menu a:hover::after {
-    width: 100%;
-}
-
-.header-menu a:hover {
-    color: #1d843c;
-}
-
 header img {
     max-width: 60px;
     height: auto;
 }
+
+/* ===== NAVBAR  ===== */
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    color:black ;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1e1e1e !important;
+    letter-spacing: 1px;
+    margin-left: 40px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: black !important;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background-color: #1d843c;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1d843c !important;
+}
+

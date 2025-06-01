@@ -10,7 +10,8 @@
 
 .nosotros-card {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -20,12 +21,9 @@
 }
 
 .nosotros-contenido {
-    flex: 1 1 550px;
     padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
+    width: 50%;
+    text-align: left;
 }
 
 .nosotros-contenido h1 {
@@ -33,23 +31,19 @@
     color: #2f4f4f;
     margin-bottom: 20px;
     text-align: left;
+    display: block;
+    padding: 20px;
 }
 
 .nosotros-contenido p {
-    font-size: 17px;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 .nosotros-imagen {
-    height: 100%;
-    max-height: 400px;
-    flex: 1 1 350px;
-    min-height: 100%;
+    width: 50%;
+    max-height: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: stretch;
 }
 
 .nosotros-imagen .carousel {
@@ -60,7 +54,6 @@
 }
 
 .nosotros-imagen .carousel-inner {
-    flex: 1;
     height: 100%;
 }
 
@@ -68,9 +61,8 @@
     height: 100%;
 }
 
-.nosotros-imagen .carousel-item img {
-    width: 100%;
+.nosotros-imagen .carousel-inner img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    display: block;
 }

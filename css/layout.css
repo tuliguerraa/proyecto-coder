@@ -12,11 +12,18 @@
 /* Posicionamiento del header en el grid principal */
 .header {
     grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 main {
     grid-area: main;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: calc(100vh - 160px); 
 }
+
 
 .footer {
     grid-area: footer;
