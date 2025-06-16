@@ -17,19 +17,20 @@ footer {
     }
 
     .redes-sociales {
-        margin-top: 15px;
         display: flex;
         justify-content: center;
         gap: 20px;
 
-        i {
-            font-size: 28px;
-            color: #000;
-            transition: transform 0.3s ease, color 0.3s ease;
+        @each $icono in $iconos-sociales {
+            a #{$icono} {
+                font-size: 28px;
+                color: #000;
+                transition: transform 0.3s ease, color 0.3s ease;
 
-            &:hover {
-                transform: scale(1.2);
-                color: $color-principal;
+                &:hover {
+                    transform: scale(1.2);
+                    color: $color-principal;
+                }
             }
         }
     }
