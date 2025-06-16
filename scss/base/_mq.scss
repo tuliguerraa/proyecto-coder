@@ -1,15 +1,12 @@
-// ==== MEDIA QUERIES ====
-
-// === Hasta 1024px ===
 @media (max-width: 1024px) {
     .hero-texto {
         text-align: center;
         align-items: center;
-    }
 
-    .hero-texto h1,
-    .hero-texto p {
-        text-align: center;
+        h1,
+        p {
+            text-align: center;
+        }
     }
 
     .nosotros-contenido {
@@ -25,7 +22,6 @@
     }
 }
 
-// === Hasta 768px ===
 @media (max-width: 768px) {
     .navbar-collapse {
         background-color: #fff;
@@ -36,18 +32,18 @@
     .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
-    }
 
-    .navbar-nav .nav-link {
-        color: #1e1e1e;
-        padding: 10px 20px;
-        font-weight: 500;
-        width: 100%;
-        transition: background-color 0.3s ease;
-    }
+        .nav-link {
+            color: #1e1e1e;
+            padding: 10px 20px;
+            font-weight: 500;
+            width: 100%;
+            transition: background-color 0.3s ease;
 
-    .navbar-nav .nav-link:hover {
-        background-color: #f1f1f1;
+            &:hover {
+                background-color: #f1f1f1;
+            }
+        }
     }
 
     .hero-split {
@@ -70,31 +66,36 @@
         margin: 0 auto;
     }
 
-    // SECCIÓN NOSOTROS: carrusel arriba y texto centrado
     .nosotros-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
     }
 
     .nosotros-imagen {
-        width: 100%;
-        order: -1;
+        width: 100% !important;
+        order: -1 !important;
         margin-bottom: 20px;
     }
 
     .nosotros-contenido {
-        width: 100%;
-        text-align: center;
+        width: 100% !important;
+        text-align: center !important;
         padding: 20px;
+
+        h1 {
+            text-align: center !important;
+            margin: 0 auto !important;
+            display: block;
+            width: 100%;
+        }
+
+        p {
+            text-align: center;
+        }
     }
 
-    .nosotros-contenido h1,
-    .nosotros-contenido p {
-        text-align: center;
-    }
-
-    // SERVICIOS: tarjetas una debajo de otra
     .servicios-main {
         grid-template-columns: 1fr;
     }
@@ -103,10 +104,12 @@
         height: auto;
     }
 
-    .card-front img {
-        height: auto;
-        width: 100%;
-        object-fit: cover;
+    .card-front {
+        img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     footer {
@@ -114,14 +117,15 @@
     }
 }
 
-// === Hasta 600px ===
 @media (max-width: 600px) {
     .grupo-doble {
         flex-direction: column;
     }
 
-    .hero-texto h1 {
-        font-size: 1.8rem;
+    .hero-texto {
+        h1 {
+            font-size: 1.8rem;
+        }
     }
 
     .faq-main {
@@ -138,7 +142,6 @@
     }
 }
 
-// === Hasta 480px ===
 @media (max-width: 480px) {
     .hero-texto {
         padding: 20px;
@@ -186,8 +189,10 @@
         padding: 10px;
     }
 
-    .redes-sociales i {
-        font-size: 22px;
-        gap: 12px;
+    .redes-sociales {
+        i {
+            font-size: 22px;
+            gap: 12px;
+        }
     }
 }
