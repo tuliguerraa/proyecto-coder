@@ -1,0 +1,60 @@
+// ==== HEADER GENERAL ====
+.header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+// ==== NAVBAR ====
+.navbar {
+    background-color: $color-principal;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    color: black;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 2rem;
+    color: $color-terciario !important;
+    letter-spacing: 1px;
+    margin-left: 40px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: black !important;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background-color: $color-principal;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav .nav-link:hover {
+    color: $color-principal !important;
+}

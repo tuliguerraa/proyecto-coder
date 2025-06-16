@@ -1,0 +1,25 @@
+// ==== RESET Y CONFIGURACIÓN BASE ====
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ==== BODY ====
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $color-terciario;
+    background-image: url('../img/fondo23.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+// ==== SELECCIÓN DE TEXTO ====
+header::selection,
+main::selection,
+footer::selection {
+    background-color: $color-principal;
+    color: #fff;
+}

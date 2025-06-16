@@ -1,0 +1,33 @@
+//* ==== VARIABLES ==== *//
+$color-principal: #1d843c;
+$color-secundario: rgba(255, 255, 255, 0.85);
+$color-terciario: #1e1e1e;
+
+
+//* ==== EXTENDS ==== *//
+%bottom {
+    background-color: $color-principal;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #145c2a;
+        color: white;
+    }
+}
+
+
+//* ==== MIXINS ==== *//
+@mixin bloque-contenido($bg, $padding: 40px, $radius: 20px) {
+    background-color: $bg;
+    padding: $padding;
+    border-radius: $radius;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+// Condicionales y bucles 

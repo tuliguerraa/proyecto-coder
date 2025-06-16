@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-coder",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hola 👋, soy María Guerra</h1>\r <h3 align=\"center\">Estudiando desarrollo web en Coderhouse</h3>",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuliguerraa/proyecto-coder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuliguerraa/proyecto-coder/issues"
+  },
+  "homepage": "https://github.com/tuliguerraa/proyecto-coder#readme",
+  "keywords": [],
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

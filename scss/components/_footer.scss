@@ -1,0 +1,39 @@
+// ==== FOOTER GENERAL ====
+footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+    clear: both;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+// ==== SELECCIÓN DE TEXTO EN FOOTER ====
+footer::selection {
+    background-color: $color-principal;
+    color: #fff;
+}
+
+// ==== REDES SOCIALES ====
+.redes-sociales {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes-sociales i {
+    font-size: 28px;
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes-sociales i:hover {
+    transform: scale(1.2);
+    color: $color-principal;
+}
