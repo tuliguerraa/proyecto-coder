@@ -14,6 +14,16 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
 }
 
 // ==== SELECCIÓN DE TEXTO ====

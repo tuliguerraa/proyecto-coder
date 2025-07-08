@@ -1,9 +1,8 @@
 // ==== MAIN LAYOUT GENERAL ====
-main {
+.main {
     grid-area: main;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    min-height: calc(100vh - 160px);
+    padding-bottom: 100px;
+    min-height: 100%;
 }
 
 // ==== HERO SPLIT ====
@@ -13,108 +12,46 @@ main {
     align-items: center;
     justify-content: center;
     background: transparent;
-    padding: 20px 20px;
+    padding: 0px 20px 100px;
     gap: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     margin: auto;
-    max-width: 180%;
-}
+    max-width: 100%;
 
-.hero-texto {
-    @include bloque-contenido(white 40px, 20px);
-    flex: 1 1 500px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.hero-texto img.logo-hero {
-    max-width: 240px;
-    margin-bottom: 20px;
-    margin-left: 80px;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
-}
-
-.hero-texto h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-left: 60px;
-    color: black;
-    margin-bottom: 20px;
-    max-width: 500px;
-}
-
-.boton-hero {
-    @extend %bottom;
-    margin-left: 60px;
-    padding: 18px 40px;
-    width: fit-content;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: background-color 0.4s ease, transform 0.3s ease;
-
-    &:hover {
-        background-color: $color-secundario;
-        transform: scale(1.05);
-    }
-}
-
-// ==== FORMULARIO PRESUPUESTO ====
-.formulario-presupuesto {
-    background: transparent;
-    padding: 60px 40px;
-    margin: 40px auto;
-    border-radius: 20px;
-    max-width: 1000px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    text-align: center;
-
-    h2 {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 30px;
-        color: black;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-                position: relative;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 90px;
-            height: 4px;
-            background-color: black;
-            margin: 12px auto 0;
-            border-radius: 2px;
-        }
-    }
-
-    form {
+    .hero-texto {
+        @include bloque-contenido(white 40px, 20px);
+        flex: 1 1 500px;
+        margin: 20px;
         display: flex;
         flex-direction: column;
-        gap: 16px;
-        align-items: center;
-        max-width: 600px;
-        margin: 0 auto;
+        justify-content: center;
+        text-align: left;
 
-        input,
-        button {
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
+        img.logo-hero {
+            max-width: 240px;
+            margin-bottom: 20px;
+            margin-left: 80px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
         }
 
-        button {
-            background-color: $color-principal;
-            color: #fff;
-            font-weight: 600;
-            border: none;
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-left: 60px;
+            color: black;
+            margin-bottom: 20px;
+            max-width: 700px;
+        }
+
+        .boton-hero {
+            @extend %bottom;
+            margin-left: 60px;
+            padding: 18px 40px;
+            width: fit-content;
+            font-size: 1.2rem;
+            text-decoration: none;
             transition: background-color 0.4s ease, transform 0.3s ease;
-            cursor: pointer;
 
             &:hover {
                 background-color: $color-secundario;
@@ -122,267 +59,93 @@ main {
             }
         }
     }
-}
 
-// ==== FORMULARIO DE CONTACTO ====
-form.needs-validation {
-    @include bloque-contenido($color-secundario, 40px, 16px);
-    max-width: 900px;
-    margin: 60px auto;
-}
+    .beneficios-home {
+        position: absolute;
+        top: 120px;
+        right: 100px;
+        width: 550px;
+        height: 180px;
+        background-color: rgba(255, 255, 255, 0.041);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        font-size: 0.95rem;
+        z-index: 10;
 
-form label {
-    font-weight: 600;
-    color: $color-terciario;
-    margin-bottom: 6px;
-}
+        h2 {
+            font-size: 1.1rem;
+            color: #1d843c;
+            margin-bottom: 10px;
+            text-align: left;
+        }
 
-form input,
-form textarea,
-form select {
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    padding: 12px 16px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
+        ul {
+            list-style: none;
+            padding: 0 0 0 20px;
+            margin: 0;
+        }
 
-form input:focus,
-form textarea:focus,
-form select:focus {
-    border-color: $color-principal;
-    box-shadow: 0 0 0 4px rgba(29, 132, 60, 0.1);
-    outline: none;
-}
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
 
-.valid-feedback,
-.invalid-feedback {
-    font-size: 0.9em;
-    color: #555;
-}
+        li::before {
+            content: "✔️";
+            position: absolute;
+            left: -5px;
+            color: #1d843c;
+            font-size: 1rem;
+        }
+    }
 
-.form-check-input {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid $color-principal;
-    border-radius: 4px;
-    background-color: #fff;
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    cursor: pointer;
-}
+    .scroll-down {
+        text-align: center;
+        width: 100%;
+        margin-top: 40px;
+        position: relative;
+        z-index: 2;
 
-.form-check-input:checked {
-    background-color: $color-principal;
-    border-color: $color-principal;
-}
+        i {
+            font-size: 80px;
+            color: black;
+            animation-duration: 2s;
+        }
 
-.was-validated .form-control:valid {
-    border-color: $color-principal;
-    box-shadow: 0 0 0 4px white;
-}
-
-.was-validated .form-check-input:valid {
-    border-color: $color-principal;
-    background-color: $color-principal;
-}
-
-.btn-custom {
-    @extend %bottom;
-    padding: 14px 30px;
-}
-
-// ==== SECCIÓN NOSOTROS ====
-.nosotros-seccion {
-    padding: 80px 20px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-}
-
-.nosotros-card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    @include bloque-contenido($color-secundario, 0, 20px);
-    max-width: 1100px;
-    width: 100%;
-    position: relative
-}
-
-.nosotros-contenido {
-    padding: 40px;
-    width: 50%;
-    text-align: left;
-}
-
-.nosotros-contenido h1 {
-    font-size: 32px;
-    color: #2f4f4f;
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.nosotros-contenido p {
-    font-size: 16px;
-    line-height: 1.4;
-}
-
-.nosotros-imagen {
-    width: 50%;
-    max-height: 100%;
-    position: relative;
-    flex-shrink: 0;
-    height: 500px;
-}
-
-.nosotros-imagen .carousel,
-.nosotros-imagen .carousel-inner {
-    width: 100%;
-    height: auto;
-    height: 100%;
-}
-
-.nosotros-imagen .carousel-item {
-    height: 100%;
-}
-
-.nosotros-imagen .carousel-inner img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-// ==== SECCIÓN SERVICIOS ====
-.servicios-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); // ✅ 2 tarjetas fijas por fila
-    gap: 40px;
-    padding: 40px 20px;
-    background-color: #f8f8f83d;
-    max-width: 1200px;
-    margin: 20px auto;
-    border-radius: 12px;
-}
-
-.servicio {
-    perspective: 1000px;
-    height: 400px;
-}
-
-.card-servicio {
-    width: 100%;
-    height: 100%;
-}
-
-.card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.8s ease;
-}
-
-.servicio:hover .card-inner {
-    transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card-front {
-    background-color: white;
-}
-
-.card-front img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.card-front h2 {
-    font-size: 20px;
-    color: #2f4f4f;
-    margin-top: 10px;
-}
-
-.card-back {
-    background-color: #1d843c;
-    color: white;
-    transform: rotateY(180deg);
-    text-align: center;
-    padding: 20px;
-}
-
-// ==== SECCIÓN PREGUNTAS FRECUENTES (FAQ) ====
-.accordion-item {
-    background-color: #f8f8f84d;
-    border: 1px solid #cfd8dc;
-    border-radius: 12px;
-    margin-bottom: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.4s ease;
-
-    &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        #scrollArrow {
+            transition: opacity 2s ease;
+        }
     }
 }
 
-.accordion-button {
-    background-color: #e8f5e9;
-    color: $color-principal;
-    font-weight: 600;
-    padding: 16px 20px;
-    font-size: 18px;
-    border: none;
-    box-shadow: none;
-    transition: background-color 0.3s ease;
-}
-
-.accordion-button:hover {
-    background-color: #d0e8d2;
-}
-
-.accordion-button::after {
-    font-size: 22px;
-    color: #145c2a;
-    margin-left: auto;
+// ==== BOTÓN WHATSAPP FLOTANTE ====
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    font-size: 28px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-}
 
-.accordion-button:not(.collapsed) {
-    background-color: #cde5cd;
-    color: #0b3d0b;
-}
+    i {
+        font-size: 40px;
+        line-height: 1;
+    }
 
-.accordion-body {
-    background-color: transparent;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    border-top: 1px solid #cfd8dc;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 // ==== TESTIMONIOS ====
@@ -433,30 +196,412 @@ form select:focus {
     }
 }
 
-// ==== BOTÓN WHATSAPP FLOTANTE ====
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 40px;
-    width: 80px;
-    height: 80px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    font-size: 28px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+// ==== FORMULARIO PRESUPUESTO ====
+.formulario-presupuesto {
+    background: transparent;
+    padding: 60px 40px;
+    margin: 40px auto;
+    border-radius: 20px;
+    max-width: 1000px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
 
-    i {
-        font-size: 40px;
-        line-height: 1;
+    h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: black;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 90px;
+            height: 4px;
+            background-color: black;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
     }
 
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+
+        input,
+        button {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: $color-principal;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-secundario;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+form.needs-validation {
+    @include bloque-contenido($color-secundario, 40px, 16px);
+    max-width: 900px;
+    margin: 60px auto;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+    label {
+        font-weight: 600;
+        color: $color-terciario;
+        margin-bottom: 6px;
+    }
+
+    input,
+    textarea,
+    select {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 12px 16px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+            border-color: $color-principal;
+            box-shadow: 0 0 0 4px rgba(29, 132, 60, 0.1);
+            outline: none;
+        }
+    }
+
+    .form-check {
+        display: flex !important;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+        width: 100%;
+        padding-left: 0;
+
+        .form-check-input {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin: 0 !important;
+            appearance: none;
+            border: 2px solid $color-principal;
+            border-radius: 4px;
+            background-color: #fff;
+            transition: all 0.2s ease-in-out;
+
+            &:checked {
+                background-color: $color-principal;
+                border-color: $color-principal;
+            }
+        }
+
+        .form-check-label {
+            margin: 0;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #1e1e1e;
+        }
+
+        .invalid-feedback {
+            font-size: 0.85rem;
+            color: #dc3545;
+            margin-left: 10px;
+        }
+    }
+}
+
+.was-validated {
+    .form-control:valid {
+        border-color: $color-principal;
+        box-shadow: 0 0 0 4px white;
+    }
+
+    .form-check-input:valid {
+        border-color: $color-principal;
+        background-color: $color-principal;
+    }
+}
+
+.valid-feedback,
+.invalid-feedback {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.btn-custom {
+    background-color: $color-principal;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    width: fit-content;
+    margin-top: 20px;
+
     &:hover {
-        transform: scale(1.1);
+        background-color: #1d843c5b;
+        transform: scale(1.05);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(29, 132, 60, 0.3);
+    }
+
+    &:disabled {
+        background-color: #1d843c5b;
+        color: #666;
+        cursor: not-allowed;
+    }
+}
+
+// ==== SECCIÓN NOSOTROS ====
+.nosotros-seccion {
+    padding: 80px 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+
+
+    .nosotros-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        @include bloque-contenido($color-secundario, 0, 20px);
+        max-width: 1100px;
+        width: 100%;
+        position: relative;
+
+
+        .nosotros-contenido {
+            padding: 40px;
+            width: 50%;
+            text-align: left;
+
+
+            h1 {
+                font-size: 22px;
+                color: #2f4f4f;
+                margin-bottom: 16px;
+                font-weight: 700;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #2f4f4f;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 1.4;
+            }
+        }
+
+        .nosotros-imagen {
+            width: 50%;
+            max-height: 100%;
+            position: relative;
+            flex-shrink: 0;
+            height: 500px;
+
+
+            .carousel,
+            .carousel-inner {
+                width: 100%;
+                height: auto;
+                height: 100%;
+            }
+
+            .carousel-item {
+                height: 100%;
+            }
+
+            .carousel-inner img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// ==== SECCIÓN SERVICIOS ====
+.h1-servicios {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    color: #2f4f4f;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.servicios-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #f8f8f83d;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 12px;
+
+    .servicio {
+        perspective: 1000px;
+        height: 400px;
+
+
+        .card-servicio {
+            width: 100%;
+            height: 100%;
+
+            .card-inner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 0.8s ease;
+
+                .card-front,
+                .card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                }
+
+                .card-front {
+                    background-color: white;
+
+                    img {
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        margin-bottom: 10px;
+                    }
+
+                    h2 {
+                        font-size: 20px;
+                        color: #2f4f4f;
+                        margin-top: 10px;
+                    }
+                }
+
+                .card-back {
+                    font-size: 18px;
+                    background-color: #165f30;
+                    color: white;
+                    transform: rotateY(180deg);
+                    text-align: center;
+                    padding: 20px;
+                }
+            }
+        }
+
+        &:hover {
+            .card-inner {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+
+// ==== SECCIÓN PREGUNTAS FRECUENTES ====
+.faq-main h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2f4f4f;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.accordion-item {
+    background-color: #f8f8f84d;
+    border: 1px solid #cfd8dc;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .accordion-button {
+        background-color: #e8f5e9;
+        color: $color-principal;
+        font-weight: 600;
+        padding: 16px 20px;
+        font-size: 18px;
+        border: none;
+        box-shadow: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #d0e8d2;
+        }
+
+        &::after {
+            font-size: 22px;
+            color: #145c2a;
+            margin-left: auto;
+            transition: transform 0.3s ease;
+        }
+
+        &:not(.collapsed) {
+            background-color: #cde5cd;
+            color: #0b3d0b;
+        }
+    }
+
+    .accordion-body {
+        background-color: transparent;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        border-top: 1px solid #cfd8dc;
     }
 }

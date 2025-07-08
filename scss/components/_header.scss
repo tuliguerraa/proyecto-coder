@@ -10,51 +10,51 @@
         padding: 10px 20px;
         color: black;
 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 2rem;
-            color: $color-terciario !important;
-            letter-spacing: 1px;
-            margin-left: 120px;
-        }
-
-        .navbar-toggler {
-            border: none;
-
-            &:focus {
-                box-shadow: none;
+            .navbar-brand {
+                font-weight: 700;
+                font-size: 2rem;
+                color: $color-terciario !important;
+                letter-spacing: 1px;
+                margin-left: 120px;
             }
-        }
 
-        .navbar-nav {
-            .nav-link {
-                position: relative;
-                color: black !important;
-                margin-left: 15px;
-                font-weight: 500;
-                transition: color 0.3s ease;
+            .navbar-toggler {
+                border: none;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    bottom: -4px;
-                    height: 2px;
-                    width: 100%;
-                    background-color: $color-principal;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    transition: transform 0.3s ease;
+                &:focus {
+                    box-shadow: none;
                 }
+            }
 
-                &:hover {
-                    color: $color-principal !important;
+            .navbar-nav {
+                .nav-link {
+                    position: relative;
+                    color: black !important;
+                    margin-left: 15px;
+                    font-weight: 500;
+                    transition: color 0.3s ease;
 
                     &::after {
-                        transform: scaleX(1);
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -4px;
+                        height: 2px;
+                        width: 100%;
+                        background-color: $color-principal;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        color: $color-principal !important;
+
+                        &::after {
+                            transform: scaleX(1);
+                        }
                     }
                 }
             }
         }
     }
-}
