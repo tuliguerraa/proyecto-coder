@@ -360,21 +360,20 @@ footer::selection {
 }
 @media (max-width: 480px) {
   .navbar .container-fluid {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column;
+    flex-direction: row !important;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding-right: 0;
+    justify-content: space-between;
+    gap: 0;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .navbar-brand {
-    text-align: center;
+    text-align: left;
     font-size: 1.8rem;
     font-weight: 700;
     color: #1e1e1e;
-    margin: 0 auto;
-    padding-right: 60px;
+    margin: 0;
+    padding: 0;
   }
   .navbar-toggler {
     position: absolute;
@@ -966,7 +965,7 @@ form.needs-validation .form-check .invalid-feedback {
 }
 
 .h1-servicios {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 700;
   text-align: center;
   color: #1d843c;
