@@ -233,6 +233,13 @@
         max-width: 600px;
         margin: 0 auto;
 
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
         input,
         button {
             width: 100%;
@@ -251,7 +258,7 @@
             cursor: pointer;
 
             &:hover {
-                background-color: $color-secundario;
+                background-color: #1d843c5b;
                 transform: scale(1.05);
             }
         }
@@ -457,7 +464,7 @@ form.needs-validation {
     font-size: 45px;
     font-weight: 700;
     text-align: center;
-    color: #2f4f4f;
+    color: $color-principal;
     padding-top: 40px;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -548,7 +555,7 @@ form.needs-validation {
     font-size: 2.4rem;
     font-weight: 700;
     text-align: center;
-    color: #2f4f4f;
+    color: $color-principal;
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;

@@ -381,59 +381,173 @@
 // Celulares muy pequeños
 @mixin hasta480 {
     @media (max-width: 480px) {
+        .navbar .container-fluid {
+            position: relative !important;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding-right: 0;
+        }
+
+        .navbar-brand {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e1e1e;
+            margin: 0 auto;
+            padding-right: 60px;
+        }
+
+        .navbar-toggler {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin: 0;
+            z-index: 10;
+        }
+
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 0 0 12px 12px;
+            border: 1px solid #ddd;
+            width: 150px;
+            height: 300px;
+            z-index: 999;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center !important;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+            width: 100%;
+        }
+
+        .navbar-nav .nav-item {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link {
+            width: 100%;
+            margin-left: 0 !important;
+            text-align: center !important;
+        }
+
+        .hero-split {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 20px !important;
+        }
+
         .hero-texto {
-            padding: 20px;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            padding: 20px !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            flex: none !important;
+
+            img.logo-hero {
+                display: block;
+                margin: 0 auto 20px auto !important;
+                max-width: 100%;
+            }
 
             h1 {
-                font-size: 1.6rem;
+                font-size: 2rem !important;
+                margin: 0 auto 20px auto !important;
+                text-align: center !important;
+            }
+
+            .boton-hero {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
             }
         }
 
-        .nosotros-card {
-            padding: 0;
+        .beneficios-home {
+            display: none !important;
         }
 
-        .nosotros-contenido,
+        .whatsapp-float {
+            width: 58px !important;
+            height: 58px !important;
+            font-size: 22px !important;
+            bottom: 20px !important;
+            right: 15px !important;
+        }
+
+        .nosotros-card {
+            display: flex !important;
+            flex-direction: column-reverse !important;
+            align-items: center;
+        }
+
         .nosotros-imagen {
-            width: 100%;
-            padding: 15px;
+            width: 100% !important;
+            order: -1;
+            margin-bottom: 20px;
+        }
+
+        .nosotros-contenido {
+            width: 100% !important;
+            order: 0;
+            text-align: center;
+            padding: 20px;
+
+            h1 {
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            h2{
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .servicios-main {
+            grid-template-columns: 1fr;
         }
 
         .servicio {
             height: auto;
         }
 
-        form.needs-validation {
-            padding: 20px;
-        }
-
-        input,
-        textarea {
-            font-size: 1rem;
-        }
-
-        .accordion-button {
-            font-size: 16px;
-            padding: 12px;
-        }
-
-        .accordion-body {
-            font-size: 15px;
-            padding: 15px;
+        .card-front img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
         }
 
         footer {
-            font-size: 0.8rem;
-            padding: 10px;
-        }
-
-        .redes-sociales i {
-            font-size: 22px;
-            gap: 12px;
+            padding: 15px;
         }
     }
 }
-
 // ===== Invocación de los mixins =====
 @include hasta1024;
 @include hasta768;

@@ -359,45 +359,147 @@ footer::selection {
   }
 }
 @media (max-width: 480px) {
+  .navbar .container-fluid {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding-right: 0;
+  }
+  .navbar-brand {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin: 0 auto;
+    padding-right: 60px;
+  }
+  .navbar-toggler {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    z-index: 10;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    border: 1px solid #ddd;
+    width: 150px;
+    height: 300px;
+    z-index: 999;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+  .navbar-nav .nav-link {
+    width: 100%;
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+  .hero-split {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+  }
   .hero-texto {
-    padding: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+  .hero-texto img.logo-hero {
+    display: block;
+    margin: 0 auto 20px auto !important;
+    max-width: 100%;
   }
   .hero-texto h1 {
-    font-size: 1.6rem;
+    font-size: 2rem !important;
+    margin: 0 auto 20px auto !important;
+    text-align: center !important;
+  }
+  .hero-texto .boton-hero {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .beneficios-home {
+    display: none !important;
+  }
+  .whatsapp-float {
+    width: 58px !important;
+    height: 58px !important;
+    font-size: 22px !important;
+    bottom: 20px !important;
+    right: 15px !important;
   }
   .nosotros-card {
-    padding: 0;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center;
   }
-  .nosotros-contenido,
   .nosotros-imagen {
-    width: 100%;
-    padding: 15px;
+    width: 100% !important;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .nosotros-contenido {
+    width: 100% !important;
+    order: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  .nosotros-contenido h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .nosotros-contenido h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .nosotros-contenido p {
+    text-align: center;
+  }
+  .servicios-main {
+    grid-template-columns: 1fr;
   }
   .servicio {
     height: auto;
   }
-  form.needs-validation {
-    padding: 20px;
-  }
-  input,
-  textarea {
-    font-size: 1rem;
-  }
-  .accordion-button {
-    font-size: 16px;
-    padding: 12px;
-  }
-  .accordion-body {
-    font-size: 15px;
-    padding: 15px;
+  .card-front img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
   }
   footer {
-    font-size: 0.8rem;
-    padding: 10px;
-  }
-  .redes-sociales i {
-    font-size: 22px;
-    gap: 12px;
+    padding: 15px;
   }
 }
 .header {
@@ -661,6 +763,12 @@ footer::selection {
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 .formulario-presupuesto form input,
 .formulario-presupuesto form button {
@@ -679,7 +787,7 @@ footer::selection {
   cursor: pointer;
 }
 .formulario-presupuesto form button:hover {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(29, 132, 60, 0.3568627451);
   transform: scale(1.05);
 }
 
@@ -861,7 +969,7 @@ form.needs-validation .form-check .invalid-feedback {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
-  color: #2f4f4f;
+  color: #1d843c;
   padding-top: 40px;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -939,7 +1047,7 @@ form.needs-validation .form-check .invalid-feedback {
   font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
-  color: #2f4f4f;
+  color: #1d843c;
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
