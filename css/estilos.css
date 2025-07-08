@@ -58,7 +58,7 @@ footer::selection {
     gap: 8px;
     padding-right: 0;
   }
-  .navbar-brand {
+  .navbar .container-fluid .navbar-brand {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
@@ -66,18 +66,17 @@ footer::selection {
     margin: 0 auto;
     padding-right: 60px;
   }
-  .navbar-toggler {
+  .navbar .container-fluid .navbar-toggler {
     position: absolute;
     top: 20px;
     right: 20px;
     margin: 0;
     z-index: 10;
   }
-  .navbar-collapse {
+  .navbar .container-fluid .navbar-collapse {
     position: absolute;
     top: 100%;
     right: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -89,7 +88,7 @@ footer::selection {
     height: 300px;
     z-index: 999;
   }
-  .navbar-nav {
+  .navbar .container-fluid .navbar-collapse .navbar-nav {
     display: flex;
     flex-direction: column;
     align-items: center !important;
@@ -98,10 +97,10 @@ footer::selection {
     list-style: none;
     width: 100%;
   }
-  .navbar-nav .nav-item {
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
     width: 100%;
   }
-  .navbar-nav .nav-link {
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
     width: 100%;
     margin-left: 0 !important;
     text-align: center !important;
@@ -113,7 +112,7 @@ footer::selection {
     justify-content: center !important;
     padding: 20px !important;
   }
-  .hero-texto {
+  .hero-split .hero-texto {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -125,20 +124,20 @@ footer::selection {
     max-width: 100% !important;
     flex: none !important;
   }
-  .hero-texto img.logo-hero {
+  .hero-split .hero-texto img.logo-hero {
     display: block;
     margin: 0 auto 20px auto !important;
     max-width: 100%;
   }
-  .hero-texto h1 {
+  .hero-split .hero-texto h1 {
     font-size: 2rem !important;
     margin: 0 auto 20px auto !important;
     text-align: center !important;
   }
-  .hero-texto .boton-hero {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+  .hero-split .hero-texto .boton-hero {
+    align-self: center;
+    margin: 20px auto 0 auto !important;
+    text-align: center !important;
   }
   .beneficios-home {
     display: none !important;
@@ -155,26 +154,26 @@ footer::selection {
     flex-direction: column-reverse !important;
     align-items: center;
   }
-  .nosotros-imagen {
+  .nosotros-card .nosotros-imagen {
     width: 100% !important;
     order: -1;
     margin-bottom: 20px;
   }
-  .nosotros-contenido {
+  .nosotros-card .nosotros-contenido {
     width: 100% !important;
     order: 0;
     text-align: center;
     padding: 20px;
   }
-  .nosotros-contenido h1 {
+  .nosotros-card .nosotros-contenido h1 {
     text-align: center;
     margin: 0 auto;
   }
-  .nosotros-contenido h2 {
+  .nosotros-card .nosotros-contenido h2 {
     text-align: center;
     margin: 0 auto;
   }
-  .nosotros-contenido p {
+  .nosotros-card .nosotros-contenido p {
     text-align: center;
   }
   form {
@@ -187,35 +186,36 @@ footer::selection {
   }
 }
 @media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+  }
   .navbar .container-fluid {
-    position: relative !important;
     display: flex !important;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding-right: 0;
+    justify-content: space-between;
+    padding: 10px 15px;
+    position: relative;
   }
-  .navbar-brand {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #1e1e1e;
-    margin: 0 auto;
-    padding-right: 60px;
+  .navbar .container-fluid .navbar-brand {
+    margin-left: 0 !important;
+    font-size: 1.6rem;
+    padding: 0 !important;
+    text-align: left !important;
   }
-  .navbar-toggler {
+  .navbar .container-fluid .navbar-toggler {
     position: absolute;
     top: 20px;
     right: 20px;
     margin: 0;
     z-index: 10;
   }
-  .navbar-collapse {
+  .navbar .container-fluid .navbar-collapse {
     position: absolute;
     top: 100%;
     right: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -227,7 +227,7 @@ footer::selection {
     height: 300px;
     z-index: 999;
   }
-  .navbar-nav {
+  .navbar .container-fluid .navbar-collapse .navbar-nav {
     display: flex;
     flex-direction: column;
     align-items: center !important;
@@ -236,10 +236,10 @@ footer::selection {
     list-style: none;
     width: 100%;
   }
-  .navbar-nav .nav-item {
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
     width: 100%;
   }
-  .navbar-nav .nav-link {
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
     width: 100%;
     margin-left: 0 !important;
     text-align: center !important;
@@ -251,7 +251,7 @@ footer::selection {
     justify-content: center !important;
     padding: 20px !important;
   }
-  .hero-texto {
+  .hero-split .hero-texto {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -263,20 +263,20 @@ footer::selection {
     max-width: 100% !important;
     flex: none !important;
   }
-  .hero-texto img.logo-hero {
+  .hero-split .hero-texto img.logo-hero {
     display: block;
     margin: 0 auto 20px auto !important;
     max-width: 100%;
   }
-  .hero-texto h1 {
+  .hero-split .hero-texto h1 {
     font-size: 2rem !important;
     margin: 0 auto 20px auto !important;
     text-align: center !important;
   }
-  .hero-texto .boton-hero {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+  .hero-split .hero-texto .boton-hero {
+    align-self: center;
+    margin: 20px auto 0 auto !important;
+    text-align: center !important;
   }
   .beneficios-home {
     display: none !important;
@@ -293,100 +293,68 @@ footer::selection {
     flex-direction: column-reverse !important;
     align-items: center;
   }
-  .nosotros-imagen {
+  .nosotros-card .nosotros-imagen {
     width: 100% !important;
     order: -1;
     margin-bottom: 20px;
   }
-  .nosotros-contenido {
+  .nosotros-card .nosotros-contenido {
     width: 100% !important;
     order: 0;
     text-align: center;
     padding: 20px;
   }
-  .nosotros-contenido h1 {
+  .nosotros-card .nosotros-contenido h1 {
     text-align: center;
     margin: 0 auto;
   }
-  .nosotros-contenido h2 {
+  .nosotros-card .nosotros-contenido h2 {
     text-align: center;
     margin: 0 auto;
   }
-  .nosotros-contenido p {
+  .nosotros-card .nosotros-contenido p {
     text-align: center;
+  }
+  form {
+    padding: 30px;
   }
   .servicios-main {
-    grid-template-columns: 1fr;
-  }
-  .servicio {
-    height: auto;
-  }
-  .card-front img {
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-  }
-  footer {
-    padding: 15px;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 20px;
   }
 }
 @media (max-width: 600px) {
-  .grupo-doble {
-    flex-direction: column;
+  body {
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
   }
-  .hero-texto h1 {
-    font-size: 1.8rem;
-  }
-  .beneficios-home {
-    display: none !important;
-  }
-  .whatsapp-float {
-    width: 58px !important;
-    height: 58px !important;
-    font-size: 22px !important;
-    bottom: 20px !important;
-    right: 15px !important;
-  }
-  .faq-main {
-    padding: 0 10px;
-  }
-  .pregunta {
-    padding: 15px;
-  }
-  .boton-hero {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media (max-width: 480px) {
   .navbar .container-fluid {
-    flex-direction: row !important;
+    display: flex !important;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 0;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 10px 15px;
+    position: relative;
   }
-  .navbar-brand {
-    text-align: left;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #1e1e1e;
-    margin: 0;
-    padding: 0;
+  .navbar .container-fluid .navbar-brand {
+    margin-left: 0 !important;
+    font-size: 1.6rem;
+    padding: 0 !important;
+    text-align: left !important;
   }
-  .navbar-toggler {
+  .navbar .container-fluid .navbar-toggler {
     position: absolute;
     top: 20px;
     right: 20px;
     margin: 0;
     z-index: 10;
   }
-  .navbar-collapse {
+  .navbar .container-fluid .navbar-collapse {
     position: absolute;
     top: 100%;
     right: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -398,7 +366,7 @@ footer::selection {
     height: 300px;
     z-index: 999;
   }
-  .navbar-nav {
+  .navbar .container-fluid .navbar-collapse .navbar-nav {
     display: flex;
     flex-direction: column;
     align-items: center !important;
@@ -407,10 +375,10 @@ footer::selection {
     list-style: none;
     width: 100%;
   }
-  .navbar-nav .nav-item {
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
     width: 100%;
   }
-  .navbar-nav .nav-link {
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
     width: 100%;
     margin-left: 0 !important;
     text-align: center !important;
@@ -422,7 +390,7 @@ footer::selection {
     justify-content: center !important;
     padding: 20px !important;
   }
-  .hero-texto {
+  .hero-split .hero-texto {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -434,20 +402,20 @@ footer::selection {
     max-width: 100% !important;
     flex: none !important;
   }
-  .hero-texto img.logo-hero {
+  .hero-split .hero-texto img.logo-hero {
     display: block;
     margin: 0 auto 20px auto !important;
     max-width: 100%;
   }
-  .hero-texto h1 {
+  .hero-split .hero-texto h1 {
     font-size: 2rem !important;
     margin: 0 auto 20px auto !important;
     text-align: center !important;
   }
-  .hero-texto .boton-hero {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+  .hero-split .hero-texto .boton-hero {
+    align-self: center;
+    margin: 20px auto 0 auto !important;
+    text-align: center !important;
   }
   .beneficios-home {
     display: none !important;
@@ -464,41 +432,174 @@ footer::selection {
     flex-direction: column-reverse !important;
     align-items: center;
   }
-  .nosotros-imagen {
+  .nosotros-card .nosotros-imagen {
     width: 100% !important;
     order: -1;
     margin-bottom: 20px;
   }
-  .nosotros-contenido {
+  .nosotros-card .nosotros-contenido {
     width: 100% !important;
     order: 0;
     text-align: center;
     padding: 20px;
   }
-  .nosotros-contenido h1 {
+  .nosotros-card .nosotros-contenido h1 {
     text-align: center;
     margin: 0 auto;
   }
-  .nosotros-contenido h2 {
+  .nosotros-card .nosotros-contenido h2 {
     text-align: center;
     margin: 0 auto;
   }
-  .nosotros-contenido p {
+  .nosotros-card .nosotros-contenido p {
     text-align: center;
+  }
+  form {
+    padding: 30px;
   }
   .servicios-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 20px;
   }
-  .servicio {
-    height: auto;
+}
+@media (max-width: 480px) {
+  body {
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
   }
-  .card-front img {
-    height: auto;
+  .navbar .container-fluid {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    position: relative;
+  }
+  .navbar .container-fluid .navbar-brand {
+    margin-left: 0 !important;
+    font-size: 1.6rem;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  .navbar .container-fluid .navbar-toggler {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    z-index: 10;
+  }
+  .navbar .container-fluid .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    border: 1px solid #ddd;
+    width: 150px;
+    height: 300px;
+    z-index: 999;
+  }
+  .navbar .container-fluid .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
     width: 100%;
-    object-fit: cover;
   }
-  footer {
-    padding: 15px;
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
+    width: 100%;
+  }
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
+    width: 100%;
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+  .hero-split {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+  }
+  .hero-split .hero-texto {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+  .hero-split .hero-texto img.logo-hero {
+    display: block;
+    margin: 0 auto 20px auto !important;
+    max-width: 100%;
+  }
+  .hero-split .hero-texto h1 {
+    font-size: 2rem !important;
+    margin: 0 auto 20px auto !important;
+    text-align: center !important;
+  }
+  .hero-split .hero-texto .boton-hero {
+    align-self: center;
+    margin: 20px auto 0 auto !important;
+    text-align: center !important;
+  }
+  .beneficios-home {
+    display: none !important;
+  }
+  .whatsapp-float {
+    width: 58px !important;
+    height: 58px !important;
+    font-size: 22px !important;
+    bottom: 20px !important;
+    right: 15px !important;
+  }
+  .nosotros-card {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center;
+  }
+  .nosotros-card .nosotros-imagen {
+    width: 100% !important;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .nosotros-card .nosotros-contenido {
+    width: 100% !important;
+    order: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  .nosotros-card .nosotros-contenido h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .nosotros-card .nosotros-contenido h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .nosotros-card .nosotros-contenido p {
+    text-align: center;
+  }
+  form {
+    padding: 30px;
+  }
+  .servicios-main {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 20px;
   }
 }
 .header {
